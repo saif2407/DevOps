@@ -1,0 +1,28 @@
+Vagrant.configure("2") do |config|
+  
+  
+  config.vm.define "compute_node1" do | cn1 |
+    cn1.vm.box = "ubuntu/bionic64"
+    cn1.vm.network "private_network", ip: "192.168.10.10"
+
+    cn1.vm.provider "virtualbox" do | cn1vb |
+      cn1vb.name = "ansible_compute_node1"
+      cn1vb.memory = 2048
+      cn1vb.cpus = 2
+    end
+  
+  end
+
+    config.vm.define "compute_node2" do | cn2 |
+      cn2.vm.box = "ubuntu/bionic64"
+      cn2.vm.network "private_network", ip: "192.168.20.10"
+  
+      cn2.vm.provider "virtualbox" do | cn2vb |
+        cn2vb.name = "ansible_compute_node2"
+        cn2vb.memory = 2048
+        cn2vb.cpus = 2
+      end
+    
+    end
+
+end
