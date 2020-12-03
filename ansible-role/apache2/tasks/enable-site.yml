@@ -1,0 +1,6 @@
+- name: enable {{site}}
+  shell: a2ensite {{site}}
+  become: yes
+  become_method: sudo
+  notify:
+    - restart apache2

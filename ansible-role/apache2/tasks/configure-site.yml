@@ -1,0 +1,6 @@
+- name: configure site
+  template:
+    src: templates/apache2.conf.j2
+    dest: /etc/apache2/sites-available/{{site}}.conf
+  become: yes
+  become_method: sudo

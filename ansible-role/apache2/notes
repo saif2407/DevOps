@@ -1,0 +1,5 @@
+run this playbook by using
+ansible-playbook -i apache2/tests/inventory apache2/tests/test.yml 
+after that you need to add domain-name in your windows host file
+goto run and then type "%systemroot%\System32\drivers\etc" then open host file and add your machine ip and domain
+then goto your browser and type http://doorstep/index.html

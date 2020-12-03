@@ -1,0 +1,7 @@
+---
+# tasks file for apache2
+- import_tasks: install-apache2.yml
+- import_tasks: copy-site.yml
+- import_tasks: configure-site.yml
+- import_tasks: enable-site.yml
+...

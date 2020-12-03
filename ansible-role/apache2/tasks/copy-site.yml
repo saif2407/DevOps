@@ -1,0 +1,6 @@
+- name: copying site
+  copy:
+    src: files/index.html
+    dest: /var/www/{{site}}/
+  become: yes
+  become_method: sudo
